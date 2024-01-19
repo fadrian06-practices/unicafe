@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-// un lugar adecuado para definir un componente
 const Statistics = ({ good, neutral, bad }) => {
   const all = good + neutral + bad
 
@@ -22,7 +21,6 @@ const Statistics = ({ good, neutral, bad }) => {
 }
 
 const App = () => {
-  // guarda los clics de cada botón en su propio estado
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
