@@ -6,12 +6,13 @@ const Statistics = ({ good, neutral, bad }) => {
   return (
     <>
       <h2>Statistics</h2>
-      <p>Good {good}</p>
-      <p>Neutral {neutral}</p>
-      <p>Bad {bad}</p>
-      <p>All {all}</p>
+      {all === 0 && <p>No feedback given</p>}
       {all > 0 && (
         <>
+          <p>Good {good}</p>
+          <p>Neutral {neutral}</p>
+          <p>Bad {bad}</p>
+          <p>All {all}</p>
           <p>Average {Math.abs((good + bad * -1) / all)}</p>
           <p>Positive {(good / all) * 100} %</p>
         </>
